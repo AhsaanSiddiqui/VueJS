@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+        <style>
+            .imageSize {
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="container">
+            <div id="my-app">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a v-bind:href="link" v-bind:title="title">{{name}}</a> <br>
+                        <img v-bind:src="imageSet" v-bind:class="{imageSize:isActive}">
+                        <div v-html="htmlContent"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <form>
+                            <input type="text" v-bind:value="txtName" class="form-control" placeholder="Name"/>
+                            <input type="text" v-bind:value="txtemail" class="form-control" placeholder="Email"/>
+                            <button class="btn btn-danger" name="button" type="button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+       </div>
+
+
+       <script src="app.js"></script>
+    </body>
+</html>
